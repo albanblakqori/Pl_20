@@ -22,6 +22,9 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+CREATE DATABASE `pi`;
+
+USE `pi`;
 
 --
 -- Table structure for table `biznesi`
