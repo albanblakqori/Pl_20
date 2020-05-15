@@ -5,6 +5,9 @@ session_start();
 <html>
 <head><title>Hotel Alpet-Come and feel the difference!</title>
  <link rel="stylesheet" type="text/css" href="style/new.css" />
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 <body>
 <h1>Rezervo Online</h1>
