@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include 'include/dbconfig.php';
 ?>
 <!DOCTYPE html>
 <html>
