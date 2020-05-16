@@ -1,3 +1,5 @@
+<?php include('modal.php'); ?>
+<div class="jumbotron info-event">
 <?php 
     $id = $_GET['id'];
     
@@ -22,9 +24,13 @@
             
             if($row = mysqli_fetch_assoc($result)){
                 array_push($event, $row);
-                    echo '<h1>ID #'.$row['idEventet'].'</h1>';
-                    echo '<h1>Eventi '.$row['eEmri'].'</h1>';
-                    echo '<h1>Biznesi id'.$row['idBiznesi'].'</h1>';
+                
+                //echo '<h1>ID #'.$row['idEventet'].'</h1>';
+                echo '<h1 class="display-1" >Eventi '.$row['eEmri'].' me '.$row['eMuzika'].'</h1>';
+                echo '<a>'.$row['eData'].', prej '.$row['eFillimit'].' deri '.$row['eMbarimit'].'</a>';
+                echo '<h3> Muzike nga    '.$row['eMuzika'].'</h3>';
+                //echo '<h1>Biznesi id'.$row['eFillimit'].'-'.$row['eMbarimit']'</h1>';
+                
                 ?>
 
                 <?php
@@ -35,9 +41,9 @@
         }
     }
 
-   $res =getEvent((int)$id, $conn);
+    $res = getEvent((int)$id, $conn);
     $idBiznesi =  $res[0]['idBiznesi'];
-    print_r($idBiznesi);
+
 
 
     $sql = "SELECT bEmri from biznesi where idBiznesi = ?";
@@ -51,23 +57,35 @@
         $result = mysqli_stmt_get_result($stmt);
         $row = mysqli_fetch_assoc($result);
         $emri = $row['bEmri'];
-        echo $emri;
-
-
-        //print_r($result);
-
+ 
     }
 
-    
-  // $businessId = $eventet['idBiznesi'];
-  // print_r($businessId);
-
-   // getBusiness($businessId, $conn);
 ?>
-<p style="color: white;">Ju keni klikuar ne eventin me id <?php echo $id; ?>.</p>
-<a href="?#">Kthehu</a>
 
-<table class="content-table" align="ceneter" border="1px" style="width:700px; margin-left: auto;  margin-right: auto;">
+<p style="color: black;"><h2>Eventi organizuar nga <?php echo $emri; ?></h2>
+<br>
+<a href="?#">Kthehu Mbrapa</a></th>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<table class="content-table table table-hover" align="ceneter" style="width:700px; margin-left: auto;  margin-right: auto;">
+<thead>
+    <tr>
+    </tr>
+    <tr>
+        <th colspan="7"><h2>Informacione rreth eventit</h2></th>
+    </tr>
+    <tr>
+        <th>ID Biznesit</th>
+        <th>Karrikat e Tavolines</th>
+        <th>Statusi</th>
+        <th>ID Tavolinave</th>
+    </tr>
+</thead>
 <?php
     $query = "select eventet.idEventet, biznesi.idBiznesi,tavolinat.Karrigat,tavolinat.tStatus,tavolinat.idTavolinat from eventet inner join biznesi on eventet.idBiznesi = biznesi.idBiznesi inner join tavolinat on biznesi.idBiznesi=Tavolinat.idBiznesi  where idEventet = 2;";
     $result = mysqli_query($conn,$query);
@@ -78,9 +96,8 @@
 
     while($row = mysqli_fetch_assoc($result)){
     ?>
-
-
-  <tr class="eventTable">
+    
+  <tr class="eventTable" onclick="openTableModal(this);">
     <td><?php echo $row['idBiznesi'] ?></td>
     <td><?php echo $row['Karrigat'] ?></td>
     <td><?php echo $row['tStatus'] ?></td>

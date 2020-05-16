@@ -1,18 +1,63 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style/new.css">
 </head>
 <body>
-<footer>
-    <a href="photos/kushtetalps.pdf" target="_blank">Kushtet e p&eumlrdorimit</a> <div id="copyright">T&euml gjitha t&euml drejtat e rezervuara 2016 &copy;Alps Hotel<div/>
-        <nav>
-            <a href="https://www.facebook.com/"target="_blank"><img style="width:25px;height:25px;margin-top:10px;position:absolute;left:0" src="photos/facebook.png"></img></a>
-            <a href="https://www.twitter.com/"target="_blank"><img style="width:25px;height:25px;margin-top:10px;position:absolute;left:30px" src="photos/twitter.png"></img></a>
-            <a href="https://www.instagram.com/" target="_blank" ><img style="width:25px;height:25px;margin-top:10px;position:absolute;left:60px" src="photos/instagram.png"></img></a>
-        </nav>
-        <div style="position:absolute;top:35px;left:100px; height:30px;font-family:'Times New Roman'"><span style="font-weight:bold">Follow us</span> around the web!</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <!-- Form -->
+        <form class="form-inline" action="include/search.inc.php" method="get">
+          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Kerko ketu eventin qe ju deshironi"
+            aria-label="Search">
+            <button type="submit" class="btn btn-secondary" name="logout-submit">Kerko</button>
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </form>
+        <!-- Form -->
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+    <?php
+      if(isset($_SESSION['userEmri'])){
+        echo '<p class="login-status alert alert-success">You are logged in.</p>';
+
+    }else{
+        echo'<p class="login-status alert alert-warning"> You are logged out, please sign in!</p>';
+    }?>
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Projekti:
+    <a href="https://fiek.uni-pr.edu/">Universiteti i Prishtines</a>
+  </div>
+  <!-- Copyright -->
+
 </footer>
+<!-- Footer -->
 </body>
 </html>

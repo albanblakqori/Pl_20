@@ -9,15 +9,8 @@ require "header.php";
         }else{
             include('./components/event_table.php');
         }
-    if(isset($_SESSION['userEmri'])){
-        echo '<p class="login-status">You are logged in</p>';
-
-    }else{
-        echo'<p class="login-status"> You are logged out</p>';
-    }
+    
     ?>
-
-
 
 </div>
 <?php

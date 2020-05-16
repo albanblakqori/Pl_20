@@ -1,4 +1,4 @@
-<table class="content-table" align="ceneter" border="1px" style="width:700px; margin-left: auto;  margin-right: auto;">
+<table class="content-table table table-hover" align="ceneter" style="width:700px; margin-left: auto;  margin-right: auto;">
         <thead>
         <tr>
             <th colspan="7" ><h2>Eventet</h2></th>

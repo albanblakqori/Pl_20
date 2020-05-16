@@ -1,126 +1,37 @@
-h1{
-    font-family:'castellar';
-    text-align:center;
-    color:white;
+.nav-link{
+    margin-left:100px;
 }
-body {
 
-    background-image: url("../photos/15.jpg");
-    background-repeat: no-repeat;
-    background-attachment:fixed;}
-.menu-top{
-    margin:auto;
-    border-radius:15px;
-    margin-top:30px;
-}
-.menu-top li {display:inline;list-style:none; margin:0; line-height:35px;
-    font-family:Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#ededf2; letter-spacing:1px;}
-.menu-top li a {color:#ededf2;text-decoration:none; padding:0 42px;}
-.menu-top li a:hover {text-decoration:underline;}
-.menu-top ul{background-image:url("../photos/menutop2.jpg");background-repeat:no-repeat; padding:20px; display:inline; border-radius:10px;}
-.photomenu img{width:890px; height:250px;border-radius:15px; position:relative; margin-top:15px; }
-.menu2 {
-    background-image:url("../photos/dark.jpg");
-    border-radius:15px;
-    width:890px;
-    height:600px;
-    position:relative;
-    margin:auto;
-
-    text-align:center;
-    opacity:0.9;
-
-}
-.menu2  li{list-style:auto; line-height:35px; font-family:Helvetica; font-style:italic; color:#ededf2;}
-.menu2  li a{color:#ededf2; text-decoration:none;}
-.menu2 li a:hover{ text-decoration:underline;color:rgb(255, 204, 204)}
-.menu2 img{height:200px; width:300px;border-radius:15px; margin-top:2.5px; margin-right:2.5px}
-
-#div1{float:left; text-align:left;}
-#div2{float:right;}
-#div3{display:inline; font-family:'Times New Roman'; font-size:40px; color:white;font-style:italic;}
-
-
-.bottom{margin:auto; background-image:url("../photos/back.jpg"); position:relative; height:200px; width:890px; border-radius:15px; margin-top:5px;
-    color:white;font-size:20px; font-family:Helvetica; text-align:center;padding:0.5px; margin-top:5px}
-.bottom img{width:200px; height:140px; border-radius:15px;margin-top:15px;border:solid 2px white;}
-#bdiv1{width:222px; float:left; margin-top:7px}
-#bdiv2{width:222px;float:left; margin-top:7px}
-#bdiv3{width:222px;float:right;margin-top:7px}
-#bdiv4{width:222px; float:right;margin-top:7px}
-footer{margin:auto; height:30px; position:relative;font-size: 18px;background-image:url(../photos/1111.jpg); width:890px;border-radius:5px;
-    margin-top:5px;color:white;font-family:'Palatino Linotype';letter-spacing:0.5px;}
-footer a { margin-left:4px;text-decoration:none; color:white;}
-footer a:hover{text-decoration:underline}
-#copyright{float:right; margin-right:3px}
-
-.log{
-    background-color: #de5b5b;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    height: 100px;
-    width: 900px;
-
-}
-.log p{
-    font-size: 19px;
-    opacity: 1;
+th, tr{
     text-align: center;
 }
 
-.log {
-    display: flex;
-    align-content: space-around;
-    align-items: baseline;
-    justify-content: space-between;
-
+.info-event{
+    background-color: white;
+    text-align: center;
 }
 
- .logout{
-    margin-right: 15px;
+.log{
+    margin:10px; 
+    position: fixed;
+    right: 10px;
 }
 
-.content-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.content-table thead tr {
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-}
-
-.content-table th,
-.content-table td {
-    padding: 12px 15px;
-}
-
-.content-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+.cover{
     color: white;
+    background: url('/photos/cover1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    
 }
 
-.content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+.jumbotron{
+    margin-bottom: 0px;
 }
 
-.content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-
-.content-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-}
-
-.eventTable:hover {
-    color: #000000;
-    background-color: #dddddd;
+.signup-container{
+    margin-left: 100px;
+    margin-right: 100px;
 }
