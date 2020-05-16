@@ -22,8 +22,9 @@
             
             if($row = mysqli_fetch_assoc($result)){
                 array_push($event, $row);
-                echo '<h1>ID #'.$row['idEventet'].'</h1>';
-                echo '<h1>Eventi '.$row['eEmri'].'</h1>';
+                    echo '<h1>ID #'.$row['idEventet'].'</h1>';
+                    echo '<h1>Eventi '.$row['eEmri'].'</h1>';
+                    echo '<h1>Biznesi id'.$row['idBiznesi'].'</h1>';
                 ?>
 
                 <?php
@@ -34,11 +35,34 @@
         }
     }
 
-    $event = getEvent((int)$id, $conn);
-    
-   $businessId = $event['idBiznesi'];
+   $res =getEvent((int)$id, $conn);
+    $idBiznesi =  $res[0]['idBiznesi'];
+    print_r($idBiznesi);
 
-    getBusiness($businessId, $conn);
+
+    $sql = "SELECT bEmri from biznesi where idBiznesi = ?";
+    $stmt = mysqli_stmt_init($conn);
+
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        echo 'database error couldnt get event with id '.$id;
+    }else {
+        mysqli_stmt_bind_param($stmt, "i", $idBiznesi);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_assoc($result);
+        $emri = $row['bEmri'];
+        echo $emri;
+
+
+        //print_r($result);
+
+    }
+
+    
+  // $businessId = $eventet['idBiznesi'];
+  // print_r($businessId);
+
+   // getBusiness($businessId, $conn);
 ?>
 <p style="color: white;">Ju keni klikuar ne eventin me id <?php echo $id; ?>.</p>
 <a href="?#">Kthehu</a>
