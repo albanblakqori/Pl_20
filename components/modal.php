@@ -9,12 +9,27 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+          <?php
+          if(!isset($_SESSION['userEmri'])){
+              echo'Ju duhet te kyqeni per te rezervuar!';
+          }elseif(isset($_SESSION['userEmri'])){
+              echo 'Mire se erdhe '.$_SESSION['userEmri'];
+          }
+
+          ?>
       </div>
-      <div class="modal-footer">
+
+        <?php
+        if(isset($_SESSION['userEmri'])){
+          echo'  <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
+        <button type="button" class="btn btn-primary" onclick="senddata()">Save changes</button>
+      </div> ';
+
+        }
+        ?>
+
     </div>
   </div>
 </div>

@@ -42,6 +42,7 @@
     }
 
     $res = getEvent((int)$id, $conn);
+    $idEventet = $res[0]['idEventet'];
     $idBiznesi =  $res[0]['idBiznesi'];
 
 
@@ -68,9 +69,7 @@
 </div>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
+
 
 <table class="content-table table table-hover" align="ceneter" style="width:700px; margin-left: auto;  margin-right: auto;">
 <thead>
@@ -80,10 +79,10 @@
         <th colspan="7"><h2>Informacione rreth eventit</h2></th>
     </tr>
     <tr>
-        <th>ID Biznesit</th>
+        <th>ID Tavolinave</th>
         <th>Karrikat e Tavolines</th>
         <th>Statusi</th>
-        <th>ID Tavolinave</th>
+
     </tr>
 </thead>
 <?php
@@ -97,17 +96,19 @@
     while($row = mysqli_fetch_assoc($result)){
     ?>
     
-  <tr class="eventTable" onclick="openTableModal(this);">
-    <td><?php echo $row['idBiznesi'] ?></td>
+  <tr class="eventTable" onclick="openTableModal(this, <?php echo $idEventet; ?>)">
+      <td><?php echo $row['idTavolinat'] ?></td>
     <td><?php echo $row['Karrigat'] ?></td>
     <td><?php echo $row['tStatus'] ?></td>
-    <td><?php echo $row['idTavolinat'] ?></td>
-
     </tr>
 
 <?php
 }
 ?>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
 </tbody>
 
 </table>

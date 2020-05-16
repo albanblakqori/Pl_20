@@ -18,7 +18,7 @@ th, tr{
 }
 
 .cover{
-    color: white;
+    color: red;
     background: url('/photos/cover1.jpg');
     background-repeat: no-repeat;
     background-position: center;
