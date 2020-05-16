@@ -46,6 +46,9 @@ if(isset($_POST['signup-button'])){
                     mysqli_stmt_bind_param($stmt,"sssss",$emri,$mbiemri,$email,$passHashed,$tel);
                     mysqli_stmt_execute($stmt);
                     header("Location: ../signup.php?signup=success");
+                    $scorefile = fopen("scores/".$emri.".txt", "w");
+                    fwrite($scorefile, 0);
+                    fclose($scorefile);
                     exit();
                 }
             }

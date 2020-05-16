@@ -62,7 +62,7 @@ include 'include/dbconfig.php';
       <a class="nav-link" href="signup.php">Regjistro Biznesin</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="signup.php">Shfleto</a>
+      <a class="nav-link " href="game.php">Argetohu</a>
     </li>
     
   </ul>
