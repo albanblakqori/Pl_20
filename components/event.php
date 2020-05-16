@@ -36,9 +36,37 @@
 
     $event = getEvent((int)$id, $conn);
     
-    $businessId = $event['idBiznesi'];
+   $businessId = $event['idBiznesi'];
 
     getBusiness($businessId, $conn);
 ?>
 <p style="color: white;">Ju keni klikuar ne eventin me id <?php echo $id; ?>.</p>
 <a href="?#">Kthehu</a>
+
+<table>
+<?php
+    $query = "select eventet.idEventet, biznesi.idBiznesi,tavolinat.Karrigat,tavolinat.tStatus,tavolinat.idTavolinat from eventet inner join biznesi on eventet.idBiznesi = biznesi.idBiznesi inner join tavolinat on biznesi.idBiznesi=Tavolinat.idBiznesi  where idEventet = 2;";
+    $result = mysqli_query($conn,$query);
+    ?>
+
+<tbody>
+<?php
+
+    while($row = mysqli_fetch_assoc($result)){
+    ?>
+
+
+  <tr class="eventTable" ">
+    <td><?php echo $row['idBiznesi'] ?></td>
+    <td><?php echo $row['Karrigat'] ?></td>
+    <td><?php echo $row['tStatus'] ?></td>
+    <td><?php echo $row['idTavolinat'] ?></td>
+
+    </tr>
+
+<?php
+}
+?>
+</tbody>
+
+</table>
