@@ -43,7 +43,7 @@
 <p style="color: white;">Ju keni klikuar ne eventin me id <?php echo $id; ?>.</p>
 <a href="?#">Kthehu</a>
 
-<table>
+<table class="content-table" align="ceneter" border="1px" style="width:700px; margin-left: auto;  margin-right: auto;">
 <?php
     $query = "select eventet.idEventet, biznesi.idBiznesi,tavolinat.Karrigat,tavolinat.tStatus,tavolinat.idTavolinat from eventet inner join biznesi on eventet.idBiznesi = biznesi.idBiznesi inner join tavolinat on biznesi.idBiznesi=Tavolinat.idBiznesi  where idEventet = 2;";
     $result = mysqli_query($conn,$query);
@@ -56,7 +56,7 @@
     ?>
 
 
-  <tr class="eventTable" ">
+  <tr class="eventTable">
     <td><?php echo $row['idBiznesi'] ?></td>
     <td><?php echo $row['Karrigat'] ?></td>
     <td><?php echo $row['tStatus'] ?></td>
