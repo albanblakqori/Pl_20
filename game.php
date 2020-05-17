@@ -1,6 +1,7 @@
 <?php
 require "header.php";
 
+
 $score_file = "scores/".$_SESSION['userEmri'].".txt";
 
 function debug_to_console($data){
@@ -80,7 +81,8 @@ else {
             ?>
             <?php
                 if(!isset($_SESSION['userEmri'])) {
-                    header('location:game.php');
+                    echo 'SIGNUP';
+                    //header('location:game.php');
                 } else {
                     if(isset($_POST['user_choice'])) {
                         //echo "Second Page:<br><br>";
