@@ -56,13 +56,16 @@ include 'include/dbconfig.php';
       <a class="nav-link" href="index.php">Faqja Kryesore</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Bizneset</a>
+      <a class="nav-link" href="bizneset.php">Bizneset</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="signup.php">Regjistro Biznesin</a>
     </li>
     <li class="nav-item">
       <a class="nav-link " href="game.php">Argetohu</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="Rezervimet.php">Rezervimet</a>
     </li>
     
   </ul>

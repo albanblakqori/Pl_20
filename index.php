@@ -9,6 +9,8 @@ require "header.php";
         }else{
             include('./components/event_table.php');
         }
+
+
     
     ?>
 

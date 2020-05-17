@@ -116,6 +116,7 @@ INSERT INTO `klienti` (`idKlienti`, `kEmri`, `kMbiemri`, `kEmail`, `kPass`, `kTe
 (4, 'prove', 'prova', 'prove@gmail.com', '$2y$10$K/6VuHn6meNUawRBrMRFOus9R1bgVcdRIXQVbab7ATuHLDKanr746', 1231241),
 (5, 'Filan', 'Fisteku', 'filani@gmail.com', '$2y$10$gvXAKv9uTYeBP9vRxjM5xeGy52UQYXPzVkHmI8qufzMBU6AhLXE7W', 49876543),
 (6, 'Albin', 'Thaqi', 'alchi@gmail.com', '$2y$10$eAhl3opcB9eT.i6qXaYeoecX/0mGM87h7gyDRwDt/E/hAi5Q6xPz2', 44049043);
+(7,'Dikush','Dikushi','Dikushi@gmail.com','dikush','234234234');
 
 -- --------------------------------------------------------
 
@@ -369,6 +370,8 @@ ALTER TABLE `rezervimet`
 ALTER TABLE `tavolinat`
   ADD CONSTRAINT `biznesi_to_tavolinat` FOREIGN KEY (`idBiznesi`) REFERENCES `biznesi` (`idBiznesi`);
 COMMIT;
+
+TRUNCATE TABLE klieni;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
