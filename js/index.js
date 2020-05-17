@@ -26,6 +26,8 @@ function openTableModal(row, event_id) {
     var karrigat = row.getElementsByTagName('td')[1].innerHTML;
     var statusi = row.getElementsByTagName('td')[2].innerHTML;
 
+
+
     $.ajax({
         url: "./components/rezervo.php",
         data:{

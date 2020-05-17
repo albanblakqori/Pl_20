@@ -17,6 +17,15 @@ include 'include/dbconfig.php';
 <body> 
 <div class="log">
         <?php
+        if(isset($_GET['error'])){
+           if($_GET['error'] == "nouser"){
+               echo'<p style="color:red">Nuk ekziston useri</p> ';
+           }elseif($_GET['error'] == "kyqu"){
+               echo '<p style="color:red"> Duhet te logoheni per te pare rezervimet e juaja</p>';
+           }elseif($_GET['error'] =="emptyfields"){
+               echo '<p style="color: red">Plotesoni fushat</ps>';
+           }
+        }
             if(isset($_SESSION['userEmri'])) {
                 echo'<div class="logout authentication">
             <form action="include/logout.inc.php" method="post" >

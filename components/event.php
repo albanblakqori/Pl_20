@@ -96,7 +96,7 @@
     while($row = mysqli_fetch_assoc($result)){
     ?>
     
-  <tr class="eventTable" onclick="openTableModal(this, <?php echo $idEventet; ?>)">
+  <tr class="eventTable" onclick="openTableModal(this, <?php echo $idEventet; ?>) ">
       <td><?php echo $row['idTavolinat'] ?></td>
     <td><?php echo $row['Karrigat'] ?></td>
     <td><?php echo $row['tStatus'] ?></td>
