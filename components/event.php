@@ -2,6 +2,9 @@
 <div class="jumbotron info-event">
 <?php 
     $id = $_GET['id'];
+    if(!isset($_SESSION['idKlienti'])) {
+        echo'<h2 style="color: red">Per te bere rezervime duhet te logoheni</h2>';
+    }
     
     function getBusiness($id, $conn){
 
@@ -105,9 +108,7 @@
 <?php
 }
 ?>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-</button>
+
 
 </tbody>
 

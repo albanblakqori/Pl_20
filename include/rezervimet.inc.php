@@ -1,7 +1,10 @@
 
 
 
+<div class="jumbotron text-center cover" style="padding-top:20px;">
+    <p>Kliko per te fshire rezervimet!</p>
 
+</div>
 <table class="content-table table table-hover" align="ceneter" style="width:700px; margin-left: auto;  margin-right: auto;">
     <thead>
     <tr>

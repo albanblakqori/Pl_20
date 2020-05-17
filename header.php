@@ -21,7 +21,7 @@ include 'include/dbconfig.php';
            if($_GET['error'] == "nouser"){
                echo'<p style="color:red">Nuk ekziston useri</p> ';
            }elseif($_GET['error'] == "kyqu"){
-               echo '<p style="color:red"> Duhet te logoheni per te pare rezervimet e juaja</p>';
+               echo '<p style="color:#ff0000"> Duhet te logoheni per te pare rezervimet e juaja</p>';
            }elseif($_GET['error'] =="emptyfields"){
                echo '<p style="color: red">Plotesoni fushat</ps>';
            }
@@ -30,7 +30,7 @@ include 'include/dbconfig.php';
                 echo'<div class="logout authentication">
             <form action="include/logout.inc.php" method="post" >
                 <button type="submit" class="btn btn-danger" name="logout-submit">Shkyqu</button> 
-            </form>W
+            </form>
         </div>';
             }else{
                 echo'
@@ -62,14 +62,12 @@ include 'include/dbconfig.php';
 <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center" style="margin-bottom:50px; ">
 <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="index.php">Faqja Kryesore</a>
+      <a class="nav-link" href="index.php">Eventet</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="bizneset.php">Bizneset</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="signup.php">Regjistrohu</a>
-    </li>
+
     <li class="nav-item">
       <a class="nav-link " href="game.php">Argetohu</a>
     </li>

@@ -14,7 +14,7 @@
         </tr>
         </thead>
         <?php
-        $query = "SELECT * FROM eventet;";
+        $query = "SELECT * FROM eventet inner join biznesi on eventet.idBiznesi=biznesi.idBiznesi;";
         $result = mysqli_query($conn,$query);
         while($row = mysqli_fetch_assoc($result)){
         ?>  <tbody>
@@ -25,7 +25,7 @@
                 <td><?php echo $row['eFillimit'] ?></td>
                 <td><?php echo $row['eMbarimit'] ?></td>
                 <td><?php echo $row['eMuzika'] ?></td>
-                <td><?php echo $row['idBiznesi'] ?></td>
+                <td><?php echo $row['bEmri'] ?></td>
 
             </tr>
             </tbody>

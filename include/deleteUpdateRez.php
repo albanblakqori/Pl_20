@@ -16,18 +16,25 @@ function deleteRez($id,$conn){
 
 function updateTable($idRez,$conn){
 
-    $sql = "select idTavolinat from rezervimet where idRezervimet = $idRez";
-    $result = mysqli_query($conn,$sql);
+        $sql = "select idTavolinat from rezervimet where idRezervimet = $idRez";
+        $result = mysqli_query($conn,$sql);
 
-    $row= mysqli_fetch_assoc($result);
+        $row= mysqli_fetch_assoc($result);
+        if($row === null){
 
-   if($res = $row['idTavolinat']) {
+        }else{
+            $res = $row['idTavolinat'];
 
-       $query = "update tavolinat set tStatus='Free' where idTavolinat=$res";
-       mysqli_query($conn,$query);
-    }else{
-       echo "kurgjo";
-   }
+            $query = "update tavolinat set tStatus='Free' where idTavolinat=$res";
+            mysqli_query($conn,$query);
+        }
+
+
+
+
+
+
+
 
 
 
